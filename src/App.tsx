@@ -67,7 +67,7 @@ function App() {
 
   return (
     <>
-      <div style={{borderBottom: `1px solid #4e3111`}}>
+      <div style={{borderTop: `1px solid #4e3111` , paddingTop: '10px'}}>
         <h2 style={{textAlign: 'left'}}>Recommended for You</h2>
         <div style={{ display: 'flex', width: '100%', justifyContent: " space-between", gap: '3%', flexDirection: `${viewport.x <= 650 ? `column` : `row`}` }}>
           {posts.map((post, index) => {
