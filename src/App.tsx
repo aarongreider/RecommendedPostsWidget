@@ -67,8 +67,8 @@ function App() {
 
   return (
     <>
-      <div style={{borderTop: `1px solid #4e3111` , paddingTop: '10px'}}>
-        <h2 style={{textAlign: 'left'}}>Recommended for You</h2>
+      <div style={{ borderTop: `1px solid #4e3111`, paddingTop: '10px', marginTop: '70px' }}>
+        <h2 style={{ textAlign: 'left' }}>Recommended for You</h2>
         <div style={{ display: 'flex', width: '100%', justifyContent: " space-between", gap: '3%', flexDirection: `${viewport.x <= 650 ? `column` : `row`}` }}>
           {posts.map((post, index) => {
             return <div key={index} style={{ width: `${viewport.x <= 650 ? `100%` : `50%`}` }}>
@@ -86,6 +86,7 @@ function App() {
                   textOverflow: 'ellipsis',
                   WebkitLineClamp: 2,
                   maxWidth: '100%',
+                  margin: '6px'
                 }}>{getParsedTitle(post.title.rendered)}</h4>
               </a>
             </div>
