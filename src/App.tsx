@@ -67,7 +67,7 @@ function App() {
 
   return (
     <>
-      <div>
+      <div style={{borderBottom: `1px solid #4e3111`}}>
         <h2 style={{textAlign: 'left'}}>Recommended for You</h2>
         <div style={{ display: 'flex', width: '100%', justifyContent: " space-between", gap: '3%', flexDirection: `${viewport.x <= 650 ? `column` : `row`}` }}>
           {posts.map((post, index) => {
@@ -79,14 +79,14 @@ function App() {
                   aspectRatio: '16 / 9'
                 }}
                   src={`https://img.youtube.com/vi/${getYTid(post.content.rendered)}/hqdefault.jpg`}></img>}
-                <h3 style={{
+                <h4 style={{
                   display: '-webkit-box',
                   WebkitBoxOrient: 'vertical',
                   overflow: 'hidden',
                   textOverflow: 'ellipsis',
                   WebkitLineClamp: 2,
                   maxWidth: '100%',
-                }}>{getParsedTitle(post.title.rendered)}</h3>
+                }}>{getParsedTitle(post.title.rendered)}</h4>
               </a>
             </div>
           })}
